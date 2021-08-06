@@ -1,0 +1,25 @@
+<h1>{{ nombre }}</h1>
+
+<dl>
+    <td>Nombre: </td>
+    <dd> {{ nombre }} </dd>
+
+    <td>Edad: </td>
+    <dd> {{ edad }} </dd>
+
+    <td>Función: </td>
+    <dd> {{ obtenerNombre() }} </dd>
+
+    <td>Capitalizado: </td>
+    <dd> {{ nombreCapitalizado }} </dd>
+</dl>
+
+<button (click)="cambiarNombre()">
+    Cambiar Héroe
+</button>
+
+<button (click)="cambiarEdad()">
+    Cambiar Edad
+</button>
+
+<!-- En el enlace de una sola vía - one way data binding - Las propiedades solo estan enlazadas de una única manera con la propiedad del componente.ts, es decir si las propiedades cambian en el componente.ts se van ha redibujar en el componente.html pero no hay forma de cambiar el valor en el template componente.html y que automaticamente lo cambie en el componente.ts.  Para conseguir eso necesitamos usar un input y con el - two way data binding - pero se recomienda no usarlo este último. -->
