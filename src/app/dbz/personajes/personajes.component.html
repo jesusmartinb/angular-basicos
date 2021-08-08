@@ -1,0 +1,8 @@
+<h3>Personajes</h3>
+<hr>
+<ul>
+    <li *ngFor="let personaje of personajes;">
+        {{ personaje.nombre }} - {{ personaje.poder | number}}
+        <!-- Usamos un pipe | que sirve para transformar visualmente la información. Hay muchos tipos de pipe en este ejemplo utilizamos el pipe  number que formatea los numeros con coma para losmiles y punto para los decimales aunque esto se puede configurar y cambiar -->
+    </li>
+</ul>

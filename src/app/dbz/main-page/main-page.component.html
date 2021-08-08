@@ -1,0 +1,15 @@
+<h1>Dragon Ball Z</h1>
+<hr>
+
+<div class="row">
+    <div class="col">
+        <app-personajes></app-personajes>
+        <!-- <app-personajes [personajes]="personajes"></app-personajes> -->
+        <!-- Componente hijo de main-page que es el componente padre para asociarlo entre llaves se indica la propiedad del personajes component (hijo) y entre comillas se indica la propiedad del main-page component (padre) que se asocian -->
+    </div>
+    <div class="col">
+        <!-- Para recibir el evento emitido por el componente hijo (agregar component) lo indicamos como cualquier otro evento entre parentesis el nombre del evento (onNuevoPersonaje) que dispara un método llamado agregarNuevoPersonaje() que lo crearemos en el main-page.component.ts. La función recibe el parámetro $event. Como siempre que se emite un evento y se necesitan sus caracteristicas, los valores del input, el target, etc se hace con $event en los parametros de la función. Este $event es de tipo Personaje pues así lo definimos en el componente hijo. -->
+        <!-- <app-agregar [nuevo]="nuevo" (onNuevoPersonaje)="agregarNuevoPersonaje( $event )"></app-agregar> -->
+        <app-agregar [nuevo]="nuevo"></app-agregar>
+    </div>
+</div>
